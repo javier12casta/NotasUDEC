@@ -1,0 +1,7 @@
+{
+  "name": "NotasUDEC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
