@@ -22,6 +22,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Login from './pages/Login/Login';
+import Home from './pages/home/home';
+import userDoc from './pages/userDoc/userDoc';
+import authDoc from './pages/authDoc/authDoc';
+import certificado from './pages/certificado/certificado';
+import settings from './pages/settings/settings';
 
 const App: React.FC = () => {
   return (
@@ -30,12 +36,12 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
-              <Redirect to="/page/Inbox" />
-            </Route>
-            <Route path="/page/:name" exact={true}>
-              <Page />
-            </Route>
+            <Route path="/" exact component={Home} />
+            <Route path="/page/login" exact component={Login} />
+            <Route path="/page/docs" exact component={userDoc} />
+            <Route path="/page/auth" exact component={authDoc} />
+            <Route path="/page/cert" exact component={certificado} />
+            <Route path="/page/settings" exact component={settings} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
