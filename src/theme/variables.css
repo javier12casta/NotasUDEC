@@ -76,7 +76,7 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -231,6 +231,6 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-tab-bar-background: #06993f;
 
-    --ion-card-background: #06993f;
+    --ion-card-background: rgb(255, 255, 255);
   }
 }
