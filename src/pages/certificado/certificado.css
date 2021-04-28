@@ -1,0 +1,29 @@
+ion-toolbar-container {
+    background-color: #06993f !important;
+}
+
+.profile {
+    width: 20%;
+    height: 20%;
+}
+
+ion-card {
+    margin-top: 15%;
+    width: 97%;
+    height: 30rem;
+    margin-left: 13px !important;
+}
+
+ion-card-header {
+    text-align: center;
+    display: block
+}
+
+@media (max-width: 500px) {
+    ion-card {
+        margin-top: 20%;
+        width: 90%;
+        height: 19rem;
+        margin-left: 13px !important;
+    }
+}

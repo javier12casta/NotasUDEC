@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { documentLock, documents, home, person, school, settings } from 'ionicons/icons';
+import { add, documentLock, documents, home, person, school, settings , people , newspaper , construct } from 'ionicons/icons';
 import './Menu.css';
 import { IonAvatar} from '@ionic/react';
 
@@ -55,10 +55,22 @@ const appPages: AppPage[] = [
     mdIcon: school
   },
   {
-    title: 'Administración',
+    title: 'Usuarios',
     url: '/page/settings',
-    iosIcon: settings,
-    mdIcon: settings
+    iosIcon: people,
+    mdIcon: people
+  },
+  {
+    title: 'Roles',
+    url: '/page/settings',
+    iosIcon: construct,
+    mdIcon: construct
+  },
+  {
+    title: 'Permisos',
+    url: '/page/settings',
+    iosIcon: newspaper,
+    mdIcon: newspaper
   }
 ];
 
@@ -74,7 +86,7 @@ const Menu: React.FC = () => {
               <IonAvatar>
                 <img src="assets/img/Logo.png" />
               </IonAvatar>
-              <IonLabel>Notas UDEC</IonLabel>
+              <IonLabel>Notas Certificadas UDEC</IonLabel>
             
           </IonListHeader>
 
