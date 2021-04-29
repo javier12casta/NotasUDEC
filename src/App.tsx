@@ -28,6 +28,9 @@ import userDoc from './pages/userDoc/userDoc';
 import authDoc from './pages/authDoc/authDoc';
 import certificado from './pages/certificado/certificado';
 import settings from './pages/settings/settings';
+import users from './pages/users/users';
+import rols from './pages/rols/rols';
+import permissions from './pages/permissions/permissions';
 
 const App: React.FC = () => {
   return (
@@ -42,6 +45,9 @@ const App: React.FC = () => {
             <Route path="/page/auth" exact component={authDoc} />
             <Route path="/page/cert" exact component={certificado} />
             <Route path="/page/settings" exact component={settings} />
+            <Route path="/page/users" exact component={users} />
+            <Route path="/page/rols" exact component={rols} />
+            <Route path="/page/permissions" exact component={permissions} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

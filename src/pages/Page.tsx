@@ -9,7 +9,7 @@ const Page: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar class={'new-background-color'}>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
@@ -19,7 +19,7 @@ const Page: React.FC = () => {
 
       <IonContent fullscreen>
         <IonHeader collapse="condense">
-          <IonToolbar>
+          <IonToolbar class="new-background-color">
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>

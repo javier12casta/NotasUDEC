@@ -56,19 +56,19 @@ const appPages: AppPage[] = [
   },
   {
     title: 'Usuarios',
-    url: '/page/settings',
+    url: '/page/users',
     iosIcon: people,
     mdIcon: people
   },
   {
     title: 'Roles',
-    url: '/page/settings',
+    url: '/page/rols',
     iosIcon: construct,
     mdIcon: construct
   },
   {
     title: 'Permisos',
-    url: '/page/settings',
+    url: '/page/permissions',
     iosIcon: newspaper,
     mdIcon: newspaper
   }
@@ -86,7 +86,7 @@ const Menu: React.FC = () => {
               <IonAvatar>
                 <img src="assets/img/Logo.png" />
               </IonAvatar>
-              <IonLabel>Notas Certificadas UDEC</IonLabel>
+              <IonLabel style = {{color: 'white', marginLeft: '5px', fontWeight: 'bold' }}>Notas Certificadas UDEC</IonLabel>
             
           </IonListHeader>
 
@@ -94,7 +94,7 @@ const Menu: React.FC = () => {
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
+                <IonItem color="primary" className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                   <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>
