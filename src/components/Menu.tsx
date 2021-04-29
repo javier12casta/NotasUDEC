@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { documentLock, documents, home, person, school, settings } from 'ionicons/icons';
+import { add, documentLock, documents, home, person, school, settings , people , newspaper , construct } from 'ionicons/icons';
 import './Menu.css';
 import { IonAvatar} from '@ionic/react';
 
@@ -55,10 +55,22 @@ const appPages: AppPage[] = [
     mdIcon: school
   },
   {
-    title: 'Administración',
-    url: '/page/settings',
-    iosIcon: settings,
-    mdIcon: settings
+    title: 'Usuarios',
+    url: '/page/users',
+    iosIcon: people,
+    mdIcon: people
+  },
+  {
+    title: 'Roles',
+    url: '/page/rols',
+    iosIcon: construct,
+    mdIcon: construct
+  },
+  {
+    title: 'Permisos',
+    url: '/page/permissions',
+    iosIcon: newspaper,
+    mdIcon: newspaper
   }
 ];
 
@@ -74,7 +86,7 @@ const Menu: React.FC = () => {
               <IonAvatar>
                 <img src="assets/img/Logo.png" />
               </IonAvatar>
-              <IonLabel>Notas UDEC</IonLabel>
+              <IonLabel style = {{color: 'white', marginLeft: '5px', fontWeight: 'bold' }}>Notas Certificadas UDEC</IonLabel>
             
           </IonListHeader>
 
@@ -82,7 +94,7 @@ const Menu: React.FC = () => {
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
+                <IonItem color="primary" className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                   <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>

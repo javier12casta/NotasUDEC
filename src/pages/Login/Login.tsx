@@ -10,7 +10,7 @@ const Login: React.FC = () => {
     <IonPage>
       {/* cabecera en mobile */}
       <IonHeader>
-        <IonToolbar className="bar">
+        <IonToolbar className="bar" color="primary">
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
