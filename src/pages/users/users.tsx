@@ -1,4 +1,4 @@
-import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonList, IonMenuButton, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonList, IonMenuButton, IonPage, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 import { useParams } from 'react-router';
 import './users.css';
@@ -18,21 +18,62 @@ const users: React.FC = () => {
 
       <IonContent fullscreen>
        
-        <IonGrid>
-        <IonRow>
-          <IonCol size="1"></IonCol>
-          {/* login */}
-          <IonCol size="10">
 
-          </IonCol>
-          {/* footer */}
-        <IonCol size="1"></IonCol>
-        </IonRow>          
+       <IonGrid>
+       <IonRow>
+         <IonCol size="1"></IonCol>
+         {/* login */}
+         <IonCol size="10">
 
-        </IonGrid>
+         <IonCard>
+         <IonCardHeader>
+           <IonCardTitle style={{ fontSize: "30px", color: "#000" }}>Usuarios</IonCardTitle>
+         </IonCardHeader>
 
-      </IonContent>
-    </IonPage >
+         <IonCardContent>
+
+         <IonItem>
+           <IonLabel position="floating"> Nombres</IonLabel>
+           <IonInput type="text" />
+         </IonItem>
+         <IonItem>
+           <IonLabel position="floating"> Apellidos</IonLabel>
+           <IonInput type="text" />
+         </IonItem>
+
+         <IonItem>
+           <IonLabel position="floating">Direccion</IonLabel>
+           <IonInput type="text" />
+         </IonItem>
+
+         <IonItem>
+           <IonLabel position="floating">Telefono</IonLabel>
+           <IonInput type="text" />
+         </IonItem>
+
+         <IonItem>
+           <IonLabel position="floating">Genero</IonLabel>
+           <IonSelect >
+              <IonSelectOption value="M">M</IonSelectOption>
+              <IonSelectOption value="F">F</IonSelectOption>
+            </IonSelect>
+         </IonItem>
+
+         <IonButton expand="block" >
+          Registrar
+         </IonButton>
+         </IonCardContent>
+       </IonCard>
+
+         </IonCol>
+         {/* footer */}
+       <IonCol size="1"></IonCol>
+       </IonRow>          
+
+       </IonGrid>
+
+     </IonContent>
+   </IonPage >
   );
 };
 

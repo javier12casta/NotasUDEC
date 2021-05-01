@@ -33,7 +33,7 @@ const Home: React.FC = () => {
           <IonTextarea
               disabled
               readonly
-            > El sistema garantiza la transparencia y el seguimiento en la presentación de documentos legales generados por universidades, también siendo aplicable a otros documentos como Diplomas, certificados de estudios y actas de grado. 
+            >El sistema garantiza la transparencia y el seguimiento en la presentación de documentos legales generados por universidades, también siendo aplicable a otros documentos como Diplomas, certificados de estudios y actas de grado. 
             </IonTextarea>
             </IonItem>
 

@@ -78,10 +78,10 @@ const Menu: React.FC = () => {
   const location = useLocation();
 
   return (
-    <IonMenu contentId="main" type="overlay">
+    <IonMenu contentId="main" type="overlay" color="primary">
       <IonContent>
-        <IonList id="inbox-list">
-          <IonListHeader>
+        <IonList id="inbox-list" color="primary">
+          <IonListHeader color="primary">
            
               <IonAvatar>
                 <img src="assets/img/Logo.png" />
@@ -93,7 +93,7 @@ const Menu: React.FC = () => {
           <IonNote></IonNote>
           {appPages.map((appPage, index) => {
             return (
-              <IonMenuToggle key={index} autoHide={false}>
+              <IonMenuToggle key={index} autoHide={false} color="primary">
                 <IonItem color="primary" className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                   <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                   <IonLabel>{appPage.title}</IonLabel>
